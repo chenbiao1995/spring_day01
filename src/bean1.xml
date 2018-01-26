@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- ioc入门 -->
+<!-- 	<bean id="user" class="cn.itcast.ioc.User" scope="prototype"></bean> -->
+	<!-- 使用静态工厂创建对象 -->
+<!-- 	<bean id="bean2" class="cn.itcast.bean.Bean2Factory" factory-method="getBean2"></bean> -->
+	<!-- 使用实例工厂创建对象
+	创建工厂对象 -->
+<!-- 	<bean id="bean3Factory" class="cn.itcast.bean.Bean3Factory"></bean> -->
+<!-- 	<bean id="bean3" factory-bean="bean3Factory" factory-method="getBean3"></bean> -->
+
+	<!-- 使用有参数的注入属性值 -->
+	<bean id="demo1" class="cn.itcast.property.PropertyDemo1">
+		<!-- 使用有参构造注入 -->
+		<constructor-arg name="username" value="陈"></constructor-arg>
+	</bean>
+		<!-- 使用set方法注入 -->
+		<bean id="book" class="cn.itcast.property.Book">
+		<!-- 注入属性值 
+		name属性值：类里面定义的属性名称
+		value：设置具体值
+		-->
+			<property name="bookname" value="java编程思想"></property>
+		</bean>
+	
+</beans>
