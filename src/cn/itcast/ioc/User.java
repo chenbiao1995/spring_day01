@@ -1,5 +1,11 @@
 package cn.itcast.ioc;
 
+/**
+ * title:
+ * Description:
+ * @author: 
+ * @date:2018年1月29日
+ */
 public class User {
 	private String username;
 	

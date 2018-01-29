@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import cn.itcast.bean.Bean2;
 import cn.itcast.bean.Bean3;
 import cn.itcast.property.Book;
+import cn.itcast.property.Person;
 import cn.itcast.property.PropertyDemo1;
 
 public class TestIoc {
@@ -23,7 +24,11 @@ public class TestIoc {
 //		System.out.println(user1);
 //		PropertyDemo1 demo1 = (PropertyDemo1) context.getBean("demo1");
 //		demo1.test1();
-		Book book = (Book) context.getBean("book");
-		book.demobook();
+//		Book book = (Book) context.getBean("book");
+//		book.demobook();
+//		UserService userService = (UserService) context.getBean("userService");
+//		userService.add();
+		Person person = (Person) context.getBean("person");
+		person.test1();
 	}
 }
